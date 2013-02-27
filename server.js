@@ -40,8 +40,8 @@ app.configure(function(){
 
 app.get("/", function(req, res) {
   res.render("index.html", {
-    title: "This is plain HTML rendered with ejs",
-	body: "<h1>This is the page body</h1>"
+    title: "Jared's Nlog",
+	body: "<h1>Jared's Nlog</h1><h2>An experimental blog written in Node.js</h2>"
   })
 })
 
