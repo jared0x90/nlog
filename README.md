@@ -7,6 +7,7 @@ This was written on Ubuntu 12.10.
 From a fresh VM install the following:
 
 apt-get install nodejs
+
 apt-get install npm
 
 Clone or Fork the project from github then run npm install in the root of the 
