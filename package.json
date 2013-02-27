@@ -1,19 +1,8 @@
 {
-  "name": "nlog",
+  "name": "app",
   "version": "0.0.1",
-  "author": "Jared De Blander <jared0x90@gmail.com>",
-  "contributors": [
-    {
-      "name": "Jared De Blander",
-      "email": "jared0x90@gmail.com"
-    }
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jared0x90/nlog.git"
-  },
-  "dependencies" : {
-    "express"  :  "*",
-    "ejs"      :  "*",
-  },  
+  "dependencies": {
+    "express": "3.x",
+    "redis": "*"
+  }
 }
