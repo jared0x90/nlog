@@ -21,6 +21,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ******************************************************************************/
 
+// Prepare graceful exit
+process.on('SIGINT', function() {
+  console.log("\n\nGracefully shutting down from  SIGINT (Crtl-C).\n\nThanks for trying NLog,\nJared De Blander <jared0x90@gmail.com>\n");
+  // some other closing procedures go here
+  process.exit();
+})
+
 // Require libs
 var express = require('express');
 
