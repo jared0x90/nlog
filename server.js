@@ -1,7 +1,7 @@
 /******************************************************************************
 
 Nlog
-A node.js blog by Jared De Blander.
+A node.js blog
 
 Copyright (C) 2013 Jared De Blander
 jared0x90@gmail.com
@@ -32,11 +32,13 @@ var port = 80;
 var app = express();
 
 // Test express
+app.get('/', function(req, res){
+	res.send('<title>Jared\'s Blog</title><h1>Welcome to Jared\'s Blog</h1><a href="/hello.txt">View Hello World</a>');
+});
+
 app.get('/hello.txt', function(req, res){
   res.send('Hello World');
 });
 
 app.listen(port);
 console.log('Listening on port ' + port);
-
-// app.listen(80);	
