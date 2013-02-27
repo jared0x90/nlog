@@ -23,7 +23,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // Require libs
 var express = require('express');
-var ejs = require('ejs');
 
 // Define variables
 var port = 80;
@@ -31,14 +30,20 @@ var port = 80;
 // Start Express
 var app = express();
 
-// Test express
-app.get('/', function(req, res){
-	res.send('<title>Jared\'s Blog</title><h1>Welcome to Jared\'s Blog</h1><a href="/hello.txt">View Hello World</a>');
+app.configure(function(){
+  // ... 
+  app.set('views', __dirname + '/views');
+  // app.set('view engine', 'ejs');
+  app.engine('html', require('ejs').renderFile);
+  // ...
 });
 
-app.get('/hello.txt', function(req, res){
-  res.send('Hello World');
-});
+app.get("/", function(req, res) {
+  res.render("index.html", {
+    title: "This is plain HTML rendered with ejs",
+	body: "<h1>This is the page body</h1>"
+  })
+})
 
 app.listen(port);
 console.log('Listening on port ' + port);
