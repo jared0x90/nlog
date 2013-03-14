@@ -32,7 +32,7 @@ process.on('SIGINT', function() {
 var express = require('express');
 
 // Define variables
-var port = 80;
+var port = process.env.PORT;
 
 // Start Express
 var app = express();
